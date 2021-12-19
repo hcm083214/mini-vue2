@@ -1,7 +1,7 @@
 /*
  * @Author: 黄灿民
  * @Date: 2021-12-15 15:25:10
- * @LastEditTime: 2021-12-17 12:21:27
+ * @LastEditTime: 2021-12-17 12:37:16
  * @LastEditors: 黄灿民
  * @Description: 
  * @FilePath: \mini-vue2\src\core\observer\index.ts
@@ -18,7 +18,7 @@ export function observe(data: any) {
 
     if (!isObject(data)) return;
     let ob: Observer | void;
-    // 观察者已经存在直接返回，不存在则创建新的实例
+    // 观察者若存在直接返回，不存在则创建新的实例
     if (hasOwn(data,'__ob__') && data.__ob__ instanceof Observer) {
         ob = data.__ob__;
     } else {
